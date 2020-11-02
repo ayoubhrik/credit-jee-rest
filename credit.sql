@@ -42,9 +42,9 @@ CREATE TABLE `tclient` (
 --
 
 INSERT INTO `tclient` (`username`, `adresse`, `mail`, `nom`, `password`, `prenom`, `tel`, `ville`) VALUES
-('aa', 'Ramon Carande , 9', 'aaa', 'aaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa', 'aa', 'pixie.cristiana@cowaway.com', 'aaaaaaaaaaa', 'sale'),
-('aba', 'Via Ippolito D Este 1', 'yguhio', 'NAR Shop', 'aba', 'nar.shop.2017@gmail.com', 'ghjklm', 'Ferrara'),
-('bra', '10 rue de france', 'brahimmoukhtari@gmail.com', 'Moukhtari', 'bra', 'Brahim', '0661524872', 'rabat'),
+('aa', 'Ramon Carande , 9', 'aaa', 'aaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa', 'aa', 'pixie.cristiana@cowaway.com', 'aaaaaaaaaaa', 'rabat'),
+('aba', 'Via Ippolito D Este 1', 'yguhio', 'NAR Shop', 'aba', 'nar2017@gmail.com', 'ghjklm', 'Ferrara'),
+('bra', '10 rue de france', 'brahi@gmail.com', 'Mo', 'bra', 'Brahim', '0661524872', 'rabat'),
 ('ah', 'hay salam', 'ahlamhouari@gmail.com', 'houari', 'ah', 'ahlam', '0632547852', 'salé'),
 ('sam', 'Via Ippolito D Este 1', 'samirel@gmail.com', 'EL', 'sam', 'samir', '06856589635', 'Ferrara'),
 ('amine', 'amine', 'amine', 'amine', 'amine', 'amine', 'amine', 'amine'),
