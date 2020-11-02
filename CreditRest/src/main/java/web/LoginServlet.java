@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
-		String FULL_PATH = "http://"+request.getServerName()+"/api/credit/getclient/"+username+"/"+password;
+		String FULL_PATH = "http://localhost:8080/api/credit/getclient/"+username+"/"+password;
 		
 		ResteasyClient rs = new ResteasyClientBuilder().build();
 		ResteasyWebTarget target = rs.target(FULL_PATH);
