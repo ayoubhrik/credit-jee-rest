@@ -30,7 +30,7 @@ public class DeleteCreditServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		final String REST_DELETE_CREDIT = "http://"+request.getServerName()+"/api/credit/deletecredit/"+request.getParameter("id");
+		final String REST_DELETE_CREDIT = "http://localhost:8080/api/credit/deletecredit/"+request.getParameter("id");
 		final ResteasyClient c = new ResteasyClientBuilder().build();
 		final ResteasyWebTarget target = c.target(REST_DELETE_CREDIT);
 		target.request().get();
