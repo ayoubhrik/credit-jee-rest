@@ -41,7 +41,7 @@ public class CreditServlet extends HttpServlet {
 			response.sendRedirect("login");
 		}else{
 		Client client = (Client) (session.getAttribute("client"));
-		final String REST_GET_CREDITS = "http://"+request.getServerName()+"/api/credit/getcredits_by_username/"+client.getUsername();
+		final String REST_GET_CREDITS = "http://localhost:8080/api/credit/getcredits_by_username/"+client.getUsername();
 		final ResteasyClient c = new ResteasyClientBuilder().build();
 		final ResteasyWebTarget target = c.target(REST_GET_CREDITS);
 		ArrayList creditslist = target.request().get(ArrayList.class);
