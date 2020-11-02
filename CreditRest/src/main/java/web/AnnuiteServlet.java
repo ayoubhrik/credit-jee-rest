@@ -55,7 +55,7 @@ public class AnnuiteServlet extends HttpServlet {
 			double capital = Double.parseDouble(capitalS);
 			int duree = Integer.parseInt(dureeS);
 			
-			final String REST_ANNUITE = "http://"+request.getServerName()+"/api/credit/get_annuite/"+capital+"/"+taux+"/"+duree;
+			final String REST_ANNUITE = "http://localhost:8080/api/credit/get_annuite/"+capital+"/"+taux+"/"+duree;
 			final ResteasyClient c = new ResteasyClientBuilder().build();
 			final ResteasyWebTarget target = c.target(REST_ANNUITE);
 			double annuite = target.request().get(Double.class);
@@ -64,7 +64,7 @@ public class AnnuiteServlet extends HttpServlet {
 			HttpSession session  = request.getSession();
 			Client client = (Client) (session.getAttribute("client"));
 			Credit credit = new Credit(null,capital,duree,taux,annuite,null,client.getUsername());
-			final String REST_ADD_CREDIT = "http://"+request.getServerName()+"/api/credit/addcredit";
+			final String REST_ADD_CREDIT = "http://localhost:8080/api/credit/addcredit";
 			final ResteasyWebTarget target2 = c.target(REST_ADD_CREDIT);
 			Response resp = target2.request().post(Entity.entity(credit, "application/json"));
 			resp.close();
