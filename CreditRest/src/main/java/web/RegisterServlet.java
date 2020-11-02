@@ -62,7 +62,7 @@ public class RegisterServlet extends HttpServlet {
         client.setPassword(password);
         client.setUsername(username);
         
-        String FULL_PATH = "http://"+request.getServerName()+"/api/credit/addclient/";
+        String FULL_PATH = "http://localhost:8080/api/credit/addclient/";
 		ResteasyClient rs = new ResteasyClientBuilder().build();
 		ResteasyWebTarget target = rs.target(FULL_PATH);
         Response resp = target.request().post(Entity.entity(client, "application/json"));
